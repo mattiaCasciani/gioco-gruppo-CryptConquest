@@ -1,0 +1,49 @@
+public class Plus {
+	private Double value;
+	private int tipo;
+
+	public Plus() {
+	}
+
+	public Plus(Double value, int tipo) throws Exception {
+    	setValue(value);
+    	setTipo(tipo);
+	}
+
+	public Double getValue() {
+    	return value;
+	}
+
+	public void setValue(Double value) throws Exception {
+    	if (value != null) {
+        	if (value > 0) {
+            	this.value = value;
+        	} else {
+            	throw new Exception("valore non valido");
+        	}
+    	} else
+        	throw new Exception("errore valore");
+	}
+   	 
+
+	public int getTipo() {
+    	return tipo;
+	}
+
+	public void setTipo(int tipo) throws Exception {
+        	if (tipo > 0) {
+            	this.tipo = tipo;
+        	} else {
+            	throw new Exception("tipo non valido");
+        	}
+	}
+   	 
+
+	@Override
+	public String toString() {
+    	return "Plus{" + "value=" + value + ", tipo=" + tipo + '}';
+	}
+    
+    
+    
+}
