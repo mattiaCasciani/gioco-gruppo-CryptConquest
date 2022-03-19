@@ -1,0 +1,80 @@
+package Game;
+
+public class Mostro extends Personaggio{
+    private String tipo;
+
+    /**
+     * costruttore della classe Mostro
+     * @param difesa
+     * @param attacco
+     * @param vita
+     * @param tipo
+     * @throws Exception
+     */
+    public Mostro(Double difesa, Double attacco, Double vita, String tipo) throws Exception {
+        super(difesa, attacco, vita);
+        setTipo(tipo);
+    }
+
+    /**
+     * costruttore senza parametri
+     */
+    public Mostro() {
+        super();
+    }
+
+
+    /**
+     * ritorna il tipo di mostro
+     * @return
+     */
+    public String getTipo() {
+        return tipo;
+    }
+
+
+    /**
+     * dopo aver effettuato dei controlli, setta il tipo del mostro in caso non solevi un'eccezione
+     * @param tipo
+     * @throws Exception
+     */
+    public void setTipo(String tipo)throws Exception {
+        try{
+            if(!tipo.equals(""))
+                this.tipo = tipo;
+            else
+                throw new Exception("ERRORE: tipo non valido");
+        }catch(NullPointerException ex ){
+            throw new Exception("ERRORE: tipo null");
+        }
+
+    }
+
+    @Override
+    public void setAttacco(Double attacco) throws Exception {
+        super.setAttacco(attacco);
+    }
+
+    @Override
+    public void setDifesa(Double difesa)throws Exception{
+        super.setDifesa(difesa);
+    }
+
+    @Override
+    public void setVita(Double vita)throws Exception{
+        super.setVita(vita);
+    }
+
+
+    @Override
+    /**
+     * metodo che stampa le caratteristiche della classe
+     */
+    public String info() {
+        String out = "";
+        out+= tipo != null ? "Mostro{" +
+                "tipo='" + tipo + '\'' +
+                '}'+ "\n"+super.info(): out;
+        return out;
+    }
+}
