@@ -1,0 +1,68 @@
+
+public class Personaggio {
+	private Double difesa;
+	private Double attacco;
+	private Double vita;
+
+	public Personaggio() {
+	}
+
+	public Personaggio(Double difesa, Double attacco, Double vita) throws Exception {
+    	setDifesa(difesa);
+    	setAttacco(attacco);
+    	setVita(vita);
+	}
+
+	public Double getDifesa() {
+    	return difesa;
+	}
+
+	public void setDifesa(Double difesa) throws Exception {
+    	if (difesa != null) {
+        	if (difesa > 0) {
+            	this.difesa = difesa;
+        	} else {
+            	throw new Exception("valore difesa non valido");
+        	}
+    	} else
+        	throw new Exception("errore valore difesa");
+	}
+
+	public Double getAttacco() {
+    	return attacco;
+	}
+
+	public void setAttacco(Double attacco) throws Exception {
+    	if (attacco != null) {
+        	if (attacco > 0) {
+            	this.attacco = attacco;
+        	} else {
+            	throw new Exception("valore attacco non valido");
+        	}
+    	} else
+        	throw new Exception("errore valore attacco");
+	}
+
+	public Double getVita() {
+    	return vita;
+	}
+
+	public void setVita(Double vita) throws Exception {
+    	if (vita != null) {
+        	if (vita > 0) {
+            	this.vita = vita;
+        	} else {
+            	throw new Exception("valore vita non valido");
+        	}
+    	} else
+        	throw new Exception("errore valore vita");
+	}
+    
+	@Override
+	public String toString() {
+    	return "Personaggio{" + "difesa=" + difesa + ", attacco=" + attacco + ", vita=" + vita + '}';
+	}
+    
+    
+}
+
