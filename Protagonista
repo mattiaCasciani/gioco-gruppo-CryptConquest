@@ -1,0 +1,96 @@
+package Game;
+
+public class Protagonista extends Personaggio {
+    private String nome;
+
+    public Protagonista(Double difesa, Double attacco, Double vita, String nome) throws Exception {
+        super(difesa, attacco, vita);
+        setNome(nome);
+    }
+
+    public Protagonista() {
+        super();
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome)throws Exception {
+        try{
+            this.nome = nome != "" ? nome : this.nome;
+        }catch(NullPointerException ex ) {
+            throw new Exception("ERRORE: Nome null");
+        }
+    }
+
+    @Override
+    public void setAttacco(Double attacco) throws Exception {
+        super.setAttacco(attacco);
+    }
+
+    @Override
+    public void setDifesa(Double difesa)throws Exception{
+        super.setDifesa(difesa);
+    }
+
+    @Override
+    public void setVita(Double vita)throws Exception{
+        super.setVita(vita);
+    }
+
+    public boolean attacca(Mostro monster) throws Exception {
+
+        boolean atk = false;
+        boolean def = false;
+        double pRes = monster.getAttacco()-getDifesa();
+        double mRes = getAttacco()- monster.getDifesa();
+        if(monster.getAttacco() < (getVita()+getDifesa())){
+            def = true;
+            if(monster.getAttacco() > getDifesa()){
+                setDifesa(0.0);
+                if(getVita() - monster.getAttacco() <= 0){
+                    setVita(0.0);
+                    def = false;
+                }else{
+                    setVita(getVita() - pRes);
+                }
+
+            }else{
+                setDifesa(getDifesa()-monster.getAttacco());
+            }
+        }
+
+        if(getAttacco() > monster.getVita()+ (monster.getDifesa())){
+            atk = true;
+            if(getAttacco() > monster.getDifesa()){
+                monster.setDifesa(0.0);
+                if(monster.getVita() - getAttacco() < 0){
+                    monster.setVita(0.0);
+                }else{
+                    monster.setVita(monster.getVita() - mRes);
+                }
+
+            }else{
+                monster.setDifesa(monster.getDifesa()-getAttacco());
+            }
+        }
+
+        if(def == true ){
+            attacca(monster);
+        }
+          
+
+
+        return atk && def;
+    }
+
+    @Override
+    public String info() {
+        String out = "";
+        out += nome != null ? "Protagonista{" +
+                "nome='" + nome + '\'' +
+                '}'+"\n"+super.info(): out;
+        return out;
+    }
+}
