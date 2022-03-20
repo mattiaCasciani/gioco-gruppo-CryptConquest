@@ -1,1 +1,29 @@
+public class Falciatore extends Mostro {
 
+    private Integer nCelle;
+
+    public Falciatore(Integer nCelle, Double difesa, Double attacco, Double vita, String tipo) {
+        super(difesa, attacco, vita, tipo);
+        setnCelle(nCelle);
+    }
+
+    public Falciatore() {
+        super();
+    }
+
+    public Integer getnCelle() {
+        return nCelle;
+    }
+
+    public void setnCelle(Integer nCelle) {
+        this.nCelle = nCelle;
+    }
+
+    public String info() {
+        String out = "";
+        out += tipo != null ? "Mostro{"
+                + "tipo='" + tipo + '\''
+                + '}' + "\n" + super.info() : out;
+        return out;
+
+    }
