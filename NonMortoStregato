@@ -24,6 +24,10 @@ public class NonMortoStregato extends Mostro implements CanUseMana {
     public final void setMana(Integer mana) {
         this.mana = mana;
     }
+    
+    public boolean rivivi(){
+   ???
+   }
 
     public String info() {
         String out = "";
