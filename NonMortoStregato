@@ -1,0 +1,36 @@
+public class NonMortoStregato extends Mostro implements CanUseMana {
+
+    private Integer mana;
+
+    public NonMortoStregato(Integer mana, Double difesa, Double attacco, Double vita, String tipo) throws Exception {
+        super(difesa, attacco, vita, tipo);
+        setMana(mana);
+    }
+
+    public NonMortoStregato() {
+        super();
+    }
+
+    @Override
+    public int getMana() {
+        return mana;
+    }
+
+    @Override
+    public void setMana(int mana) {
+        this.mana = mana;
+    }
+
+    public final void setMana(Integer mana) {
+        this.mana = mana;
+    }
+
+    public String info() {
+        String out = "";
+        out += tipo != null ? "Mostro{"
+                + "tipo='" + tipo + '\''
+                + '}' + "\n" + super.info() : out;
+        return out;
+    }
+
+}
