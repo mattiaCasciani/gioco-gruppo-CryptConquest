@@ -70,11 +70,11 @@ public class Mostro extends Personaggio{
     /**
      * metodo che stampa le caratteristiche della classe
      */
-    public String info() {
+    public String toString() {
         String out = "";
         out+= tipo != null ? "Mostro{" +
                 "tipo='" + tipo + '\'' +
-                '}'+ "\n"+super.info(): out;
+                '}'+ "\n"+super.toString(): out;
         return out;
     }
 }
