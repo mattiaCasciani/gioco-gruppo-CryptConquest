@@ -6,63 +6,119 @@ public class Stregone extends Mostro implements CanUseMana{
 
     private Integer mana;
 
+    /**
+     * Costruttore con parametri che chiama il costruttore della classe Mostro
+     * @param mana
+     * @param difesa
+     * @param attacco
+     * @param vita
+     * @param tipo
+     * @throws Exception
+     */
     public Stregone(Integer mana, Double difesa, Double attacco, Double vita, String tipo) throws Exception {
         super(difesa, attacco, vita, tipo);
         setMana(mana);
 
     }
 
+    /**
+     * Costruttore senza parametri
+     */
     public Stregone() {
         super();
     }
 
+    /**
+     * metodo ereditato dalla classe Mostro
+     * @return
+     */
     @Override
     public String getTipo() {
         return super.getTipo();
     }
 
+    /**
+     * metodo ereditato dalla classe Mostro
+     * @param tipo
+     * @throws Exception
+     */
     @Override
     public void setTipo(String tipo) throws Exception {
         super.setTipo(tipo);
     }
 
+    /**
+     * metodo ereditato dalla classe Mostro
+     * @param attacco
+     * @throws Exception
+     */
     @Override
     public void setAttacco(Double attacco) throws Exception {
         super.setAttacco(attacco);
     }
 
+    /**
+     * metodo ereditato dalla classe Mostro
+     * @param difesa
+     * @throws Exception
+     */
     @Override
     public void setDifesa(Double difesa) throws Exception {
         super.setDifesa(difesa);
     }
 
+    /**
+     * metodo ereditato dalla classe Mostro
+     * @param vita
+     * @throws Exception
+     */
     @Override
     public void setVita(Double vita) throws Exception {
         super.setVita(vita);
     }
 
 
-
+    /**
+     * metodo ereditato dalla classe Mostro
+     * @return
+     */
     @Override
     public Double getDifesa() {
         return super.getDifesa();
     }
 
+    /**
+     * metodo ereditato dalla classe Mostro
+     * @return
+     */
     @Override
     public Double getAttacco() {
         return super.getAttacco();
     }
 
+    /**
+     * metodo ereditato dalla classe Mostro
+     * @return
+     */
     @Override
     public Double getVita() {
         return super.getVita();
     }
 
+    /**
+     * metodo implementayo dall'interfaccia CanUsemana e ritorna il mana dello stregone
+     * @return
+     */
     @Override
     public Integer getMana() {
         return mana;
     }
 
+    /**
+     * metodo che modifica la quantità di mana dello stregone
+     * @param mana
+     * @throws Exception
+     */
     @Override
     public void setMana(Integer mana)throws Exception {
         try{
@@ -76,6 +132,10 @@ public class Stregone extends Mostro implements CanUseMana{
         }
     }
 
+    /**
+     * metodo che incrementa le statistiche del personaggio in base al mana utilizzato
+     * @throws Exception
+     */
     public void incrementa() throws Exception {
         Integer m = getMana();
         if(m != 0){
@@ -105,13 +165,20 @@ public class Stregone extends Mostro implements CanUseMana{
         }
     }
 
+    /**
+     * metodo per randomizzare un numero da 0 a 2
+     * @return
+     */
     private int random(){
         int i = (int) (Math.random() * 2);
         return i;
     }
 
 
-
+    /**
+     * metodo che stampa le caratteristiche della classe
+     * @return
+     */
     @Override
     public String toString() {
         return "Stregone{" +
