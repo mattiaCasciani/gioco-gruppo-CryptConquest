@@ -7,19 +7,38 @@ public abstract class Personaggio {
     private Double attacco;
     private Double vita;
 
+    /**
+     * Costruttore senza parametri
+     */
     public Personaggio() {
     }
 
+    /**
+     * Costruttore con parametri della classe Personaggio
+     * @param difesa
+     * @param attacco
+     * @param vita
+     * @throws Exception
+     */
     public Personaggio(Double difesa, Double attacco, Double vita) throws Exception {
         setDifesa(difesa);
         setAttacco(attacco);
         setVita(vita);
     }
 
+    /**
+     * metodo get dell'attribto difesa
+     * @return
+     */
     public Double getDifesa() {
         return difesa;
     }
 
+    /**
+     * metodo che modifica il valore dell'attributo difesa
+     * @param difesa
+     * @throws Exception
+     */
     public void setDifesa(Double difesa) throws Exception {
         if (difesa != null) {
             if (difesa >= 0) {
@@ -31,10 +50,19 @@ public abstract class Personaggio {
             throw new Exception("errore valore difesa");
     }
 
+    /**
+     * metodo che restituisce il valore dell'attributo attacco
+     * @return
+     */
     public Double getAttacco() {
         return attacco;
     }
 
+    /**
+     * metodo che modifica ol valore dell'attributo attacco con quello passato da parametro
+     * @param attacco
+     * @throws Exception
+     */
     public void setAttacco(Double attacco) throws Exception {
         if (attacco != null) {
             if (attacco > 0) {
@@ -46,10 +74,19 @@ public abstract class Personaggio {
             throw new Exception("errore valore attacco");
     }
 
+    /**
+     * metodo che ritorna il valore dell'attributo vita
+     * @return
+     */
     public Double getVita() {
         return vita;
     }
 
+    /**
+     * metodo che modifica il valore dell'attributo vita con quello passato da parametro
+     * @param vita
+     * @throws Exception
+     */
     public void setVita(Double vita) throws Exception {
         if (vita != null) {
             if (vita >= 0) {
@@ -61,6 +98,10 @@ public abstract class Personaggio {
             throw new Exception("errore valore vita");
     }
 
+    /**
+     * metodo che stampa le caratteristiche della classe
+     * @return
+     */
     public String toString() {
         return "Personaggio{" + "difesa=" + difesa + ", attacco=" + attacco + ", vita=" + vita + '}';
     }
