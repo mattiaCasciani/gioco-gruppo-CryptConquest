@@ -1,49 +1,83 @@
+package Game;
+
 public class Plus {
-	private Double value;
-	private int tipo;
+    private Double value;
+    private int tipo;
 
-	public Plus() {
-	}
+    /**
+     * Costruttore senza parametri della classe Plus
+     */
+    public Plus() {
+    }
 
-	public Plus(Double value, int tipo) throws Exception {
-    	setValue(value);
-    	setTipo(tipo);
-	}
+    /**
+     * Costruttore con parametri della classe Plus
+     * @param value
+     * @param tipo
+     * @throws Exception
+     */
+    public Plus(Double value, int tipo) throws Exception {
+        setValue(value);
+        setTipo(tipo);
+    }
 
-	public Double getValue() {
-    	return value;
-	}
+    /**
+     * metodo che ritorna il valore dell'attributo value
+     * @return
+     */
+    public Double getValue() {
+        return value;
+    }
 
-	public void setValue(Double value) throws Exception {
-    	if (value != null) {
-        	if (value > 0) {
-            	this.value = value;
-        	} else {
-            	throw new Exception("valore non valido");
-        	}
-    	} else
-        	throw new Exception("errore valore");
-	}
-   	 
+    /**
+     * metodo che modifica il valore dell'attributo value con quello passato da parametro
+     * @param value
+     * @throws Exception
+     */
+    public void setValue(Double value) throws Exception {
+        if (value != null) {
+            if (value > 0) {
+                this.value = value;
+            } else {
+                throw new Exception("valore non valido");
+            }
+        } else
+            throw new Exception("errore valore");
+    }
 
-	public int getTipo() {
-    	return tipo;
-	}
 
-	public void setTipo(int tipo) throws Exception {
-        	if (tipo > 0) {
-            	this.tipo = tipo;
-        	} else {
-            	throw new Exception("tipo non valido");
-        	}
-	}
-   	 
+    /**
+     * metodo che ritorna il tipo di plus (attacco, difesa, vita)
+     * @return
+     */
+    public int getTipo() {
+        return tipo;
+    }
 
-	@Override
-	public String toString() {
-    	return "Plus{" + "value=" + value + ", tipo=" + tipo + '}';
-	}
-    
-    
-    
+    /**
+     * metodo che ritorna il valore dell'attributo tipo con quello passato da parametro
+     * @param tipo
+     * @throws Exception
+     */
+    public void setTipo(int tipo) throws Exception {
+        if (tipo > 0) {
+            this.tipo = tipo;
+        } else {
+            throw new Exception("tipo non valido");
+        }
+    }
+
+
+    /**
+     * metodo che stampa le caratteristiche della classe
+     * @return
+     */
+    @Override
+    public String toString() {
+        return "Plus{" + "value=" + value + ", tipo=" + tipo + '}';
+    }
+
+
+
 }
+
