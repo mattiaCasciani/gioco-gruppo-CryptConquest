@@ -35,7 +35,7 @@ public class Falciatore extends Mostro {
     }
 
     /**
-     * metodo set dell'attributo 
+     * metodo set dell'attributo
      * @param nCelle
      * @throws Exception
      */
@@ -52,7 +52,7 @@ public class Falciatore extends Mostro {
     }
 
     /**
-     * metodo che ritorna le caratteristiche della classe 
+     * metodo che ritorna le caratteristiche della classe
      * @return
      */
     public String toString() {
