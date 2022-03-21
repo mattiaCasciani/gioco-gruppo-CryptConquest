@@ -39,7 +39,7 @@ public class Protagonista extends Personaggio {
         super.setVita(vita);
     }
 
-   public boolean attacca(Mostro monster) throws Exception {
+    public boolean attacca(Mostro monster) throws Exception {
         boolean win = false;
         while (getVita() != 0 || monster.getVita() != 0) {
             if (getAttacco() > monster.getAttacco()) {
@@ -66,12 +66,14 @@ public class Protagonista extends Personaggio {
         return win;
     }
 
-    @Override
-    public String info() {
+
+
+            @Override
+    public String toString() {
         String out = "";
         out += nome != null ? "Protagonista{" +
                 "nome='" + nome + '\'' +
-                '}'+"\n"+super.info(): out;
+                '}'+"\n"+super.toString(): out;
         return out;
     }
 }
