@@ -1,0 +1,94 @@
+package Game;
+
+public class FondatoreDellaCripta extends Stregone implements CanUseMana{
+
+    private Integer nMosse;
+
+    public FondatoreDellaCripta(Integer mana, Double difesa, Double attacco, Double vita, String tipo, Integer nMosse) throws Exception {
+        super(mana, difesa, attacco, vita, tipo);
+        setnMosse(nMosse);
+    }
+
+    public FondatoreDellaCripta() {
+        super();
+    }
+
+    public Integer getnMosse() {
+        return nMosse;
+    }
+
+    public void setnMosse(Integer nMosse)throws Exception {
+        try{
+            if(nMosse >= 0)
+                this.nMosse = nMosse;
+            else
+                throw new Exception("Numero mosse non valido");
+        }catch(NullPointerException ex){
+            throw new Exception("ERRORE: valore di nMosse null");
+        }
+
+    }
+
+    @Override
+    public String getTipo() {
+        return super.getTipo();
+    }
+
+    @Override
+    public void setTipo(String tipo) throws Exception {
+        super.setTipo(tipo);
+    }
+
+    @Override
+    public void setAttacco(Double attacco) throws Exception {
+        super.setAttacco(attacco);
+    }
+
+    @Override
+    public void setDifesa(Double difesa) throws Exception {
+        super.setDifesa(difesa);
+    }
+
+    @Override
+    public Double getDifesa() {
+        return super.getDifesa();
+    }
+
+    @Override
+    public void setVita(Double vita) throws Exception {
+        super.setVita(vita);
+    }
+
+    @Override
+    public Double getAttacco() {
+        return super.getAttacco();
+    }
+
+    @Override
+    public Double getVita() {
+        return super.getVita();
+    }
+
+    @Override
+    public Integer getMana() {
+        return super.getMana();
+    }
+
+    @Override
+    public void setMana(Integer mana) throws Exception {
+        super.setMana(mana);
+    }
+
+    @Override
+    public void incrementa() throws Exception {
+        super.incrementa();
+    }
+
+
+    @Override
+    public String toString() {
+        return "FondatoreDellaCripta{" +
+                "nMosse=" + nMosse +
+                '}'+super.toString();
+    }
+}
