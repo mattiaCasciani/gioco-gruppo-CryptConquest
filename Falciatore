@@ -1,29 +1,67 @@
+package Game;
+
 public class Falciatore extends Mostro {
 
     private Integer nCelle;
 
-    public Falciatore(Integer nCelle, Double difesa, Double attacco, Double vita, String tipo) {
+    /**
+     * costruttore con parametri
+     * @param nCelle
+     * @param difesa
+     * @param attacco
+     * @param vita
+     * @param tipo
+     * @throws Exception
+     */
+    public Falciatore(Integer nCelle, Double difesa, Double attacco, Double vita, String tipo) throws Exception {
         super(difesa, attacco, vita, tipo);
         setnCelle(nCelle);
     }
 
+
+    /**
+     * costruttore senza parametri
+     */
     public Falciatore() {
         super();
     }
 
+    /**
+     * metodo get dell'attributo
+     * @return
+     */
     public Integer getnCelle() {
         return nCelle;
     }
 
-    public void setnCelle(Integer nCelle) {
-        this.nCelle = nCelle;
+    /**
+     * metodo set dell'attributo 
+     * @param nCelle
+     * @throws Exception
+     */
+    public void setnCelle(Integer nCelle) throws Exception{
+        try{
+            if(nCelle >= 0)
+                this.nCelle = nCelle;
+            else
+                throw new Exception("Valore di nCelle non valido");
+        }catch(NullPointerException ex){
+            throw new Exception("ERRORE: valore di nCelle null");
+        }
+
     }
 
-    public String info() {
+    /**
+     * metodo che ritorna le caratteristiche della classe 
+     * @return
+     */
+    public String toString() {
         String out = "";
-        out += tipo != null ? "Mostro{"
-                + "tipo='" + tipo + '\''
-                + '}' + "\n" + super.info() : out;
+        out += nCelle != null ? "Mostro{"
+                + "nCelle='" + nCelle + '\''
+                + '}' + "\n" + super.toString() : out;
         return out;
 
     }
+
+}
