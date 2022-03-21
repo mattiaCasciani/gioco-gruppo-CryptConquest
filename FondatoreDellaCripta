@@ -4,19 +4,41 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
 
     private Integer nMosse;
 
+    /**
+     * Costruttore della classe FondatoredellaCripta che chiama il costruttore della classe Stregone
+     * @param mana
+     * @param difesa
+     * @param attacco
+     * @param vita
+     * @param tipo
+     * @param nMosse
+     * @throws Exception
+     */
     public FondatoreDellaCripta(Integer mana, Double difesa, Double attacco, Double vita, String tipo, Integer nMosse) throws Exception {
         super(mana, difesa, attacco, vita, tipo);
         setnMosse(nMosse);
     }
 
+    /**
+     * Costruttore senza parametri della classe FondatoredellaCripta
+     */
     public FondatoreDellaCripta() {
         super();
     }
 
+    /**
+     * metodo che ritorna il numero di mosse del Fondatore
+     * @return
+     */
     public Integer getnMosse() {
         return nMosse;
     }
 
+    /**
+     * metodo che modifica il valore dell'attributo nMosse con quello passato da parametro
+     * @param nMosse
+     * @throws Exception
+     */
     public void setnMosse(Integer nMosse)throws Exception {
         try{
             if(nMosse >= 0)
@@ -29,62 +51,115 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
 
     }
 
+    /**
+     * metodo ereditato dalla classe Stregone
+     * @return
+     */
     @Override
     public String getTipo() {
         return super.getTipo();
     }
 
+    /**
+     * metodo ereditato dalla classe Stregone
+     * @param tipo
+     * @throws Exception
+     */
     @Override
     public void setTipo(String tipo) throws Exception {
         super.setTipo(tipo);
     }
 
+    /**
+     * metodo ereditato dalla classe Stregone
+     * @param attacco
+     * @throws Exception
+     */
     @Override
     public void setAttacco(Double attacco) throws Exception {
         super.setAttacco(attacco);
     }
 
+    /**
+     * metodo ereditato dalla classe Stregone
+     * @param difesa
+     * @throws Exception
+     */
     @Override
     public void setDifesa(Double difesa) throws Exception {
         super.setDifesa(difesa);
     }
 
+    /**
+     * metodo ereditato dalla classe Stregone
+     * @return
+     */
     @Override
     public Double getDifesa() {
         return super.getDifesa();
     }
 
+    /**
+     * metodo ereditato dalla classe Stregone
+     * @param vita
+     * @throws Exception
+     */
     @Override
     public void setVita(Double vita) throws Exception {
         super.setVita(vita);
     }
 
+    /**
+     * metodo ereditato dalla classe Stregone
+     * @return
+     */
     @Override
     public Double getAttacco() {
         return super.getAttacco();
     }
 
+    /**
+     * metodo ereditato dalla classe Stregone
+     * @return
+     */
     @Override
     public Double getVita() {
         return super.getVita();
     }
 
+    /**
+     * metodo ereditato dalla classe Stregone
+     * @return
+     */
     @Override
     public Integer getMana() {
         return super.getMana();
     }
 
+    /**
+     * metodo ereditato dalla classe Stregone
+     * @param mana
+     * @throws Exception
+     */
     @Override
     public void setMana(Integer mana) throws Exception {
         super.setMana(mana);
     }
 
+    /**
+     * metodo ereditato dalla classe Stregone
+     * @throws Exception
+     */
     @Override
     public void incrementa() throws Exception {
         super.incrementa();
     }
 
 
+    /**
+     * metodo che stampa le caratteristiche della classe
+     * @return
+     */
     @Override
     public String toString() {
         return "FondatoreDellaCripta{" +
