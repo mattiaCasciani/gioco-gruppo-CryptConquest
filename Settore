@@ -72,7 +72,7 @@ public class Settore <T>{
      * metodo che stampa le caratteristiche della classe
      * @return
      */
-    public String info() {
+    public String toString() {
         String out = "";
         out = inside != null ? "Settore{" +
                 "isFull=" + isFull +
