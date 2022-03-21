@@ -1,0 +1,121 @@
+package Game;
+
+import java.util.Random;
+
+public class Stregone extends Mostro implements CanUseMana{
+
+    private Integer mana;
+
+    public Stregone(Integer mana, Double difesa, Double attacco, Double vita, String tipo) throws Exception {
+        super(difesa, attacco, vita, tipo);
+        setMana(mana);
+
+    }
+
+    public Stregone() {
+        super();
+    }
+
+    @Override
+    public String getTipo() {
+        return super.getTipo();
+    }
+
+    @Override
+    public void setTipo(String tipo) throws Exception {
+        super.setTipo(tipo);
+    }
+
+    @Override
+    public void setAttacco(Double attacco) throws Exception {
+        super.setAttacco(attacco);
+    }
+
+    @Override
+    public void setDifesa(Double difesa) throws Exception {
+        super.setDifesa(difesa);
+    }
+
+    @Override
+    public void setVita(Double vita) throws Exception {
+        super.setVita(vita);
+    }
+
+
+
+    @Override
+    public Double getDifesa() {
+        return super.getDifesa();
+    }
+
+    @Override
+    public Double getAttacco() {
+        return super.getAttacco();
+    }
+
+    @Override
+    public Double getVita() {
+        return super.getVita();
+    }
+
+    @Override
+    public Integer getMana() {
+        return mana;
+    }
+
+    @Override
+    public void setMana(Integer mana)throws Exception {
+        try{
+            if(mana >= 0)
+                this.mana= mana;
+            else
+                throw new Exception("valore mana non valido");
+
+        }catch(NullPointerException ex){
+            throw new Exception("ERRORE: valore mana null");
+        }
+    }
+
+    public void incrementa() throws Exception {
+        Integer m = getMana();
+        if(m != 0){
+
+            Double rand =  (Math.random() * m);
+
+            int i = random();
+
+
+
+            switch(i){
+                case 0:
+                    setVita(getVita()+rand);
+                    setMana((int) Math.ceil((m-rand)));
+                    break;
+
+                case 1:
+                    setAttacco(getAttacco()+rand);
+                    setMana((int) Math.ceil((m-rand)));
+                    break;
+
+                case 2:
+                    setDifesa((getDifesa()+rand));
+                    setMana((int) Math.ceil((m-rand)));
+            }
+
+        }
+    }
+
+    private int random(){
+        int i = (int) (Math.random() * 2);
+        return i;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Stregone{" +
+                "mana=" + mana +
+                '}' + super.toString();
+    }
+}
