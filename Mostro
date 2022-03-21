@@ -50,16 +50,31 @@ public class Mostro extends Personaggio{
 
     }
 
+    /**
+     * metodo ereditato dalla classe Personaggio
+     * @param attacco
+     * @throws Exception
+     */
     @Override
     public void setAttacco(Double attacco) throws Exception {
         super.setAttacco(attacco);
     }
 
+    /**
+     * metodo ereditato dalla classe Personaggio
+     * @param difesa
+     * @throws Exception
+     */
     @Override
     public void setDifesa(Double difesa)throws Exception{
         super.setDifesa(difesa);
     }
 
+    /**
+     * metodo ereditato dalla classe Personaggio
+     * @param vita
+     * @throws Exception
+     */
     @Override
     public void setVita(Double vita)throws Exception{
         super.setVita(vita);
