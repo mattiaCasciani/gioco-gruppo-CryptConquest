@@ -62,10 +62,6 @@ public class Protagonista extends Personaggio {
 
             @Override
     public String toString() {
-        String out = "";
-        out += nome != null ? "Protagonista{" +
-                "nome='" + nome + '\'' +
-                '}'+"\n"+super.toString(): out;
-        return out;
+        return "\uD83E\uDDCD";
     }
 }
