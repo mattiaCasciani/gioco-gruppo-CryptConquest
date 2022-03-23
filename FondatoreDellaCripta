@@ -162,8 +162,6 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      */
     @Override
     public String toString() {
-        return "FondatoreDellaCripta{" +
-                "nMosse=" + nMosse +
-                '}'+super.toString();
+        return "\uD83D\uDC64";
     }
 }
