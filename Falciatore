@@ -56,12 +56,7 @@ public class Falciatore extends Mostro {
      * @return
      */
     public String toString() {
-        String out = "";
-        out += nCelle != null ? "Mostro{"
-                + "nCelle='" + nCelle + '\''
-                + '}' + "\n" + super.toString() : out;
-        return out;
-
+        return "FL";
     }
 
 }
