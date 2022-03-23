@@ -181,8 +181,6 @@ public class Stregone extends Mostro implements CanUseMana{
      */
     @Override
     public String toString() {
-        return "Stregone{" +
-                "mana=" + mana +
-                '}' + super.toString();
+        return "\uD83E\uDDD9\u200D";
     }
 }
