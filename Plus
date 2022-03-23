@@ -74,10 +74,7 @@ public class Plus {
      */
     @Override
     public String toString() {
-        return "Plus{" + "value=" + value + ", tipo=" + tipo + '}';
+        return "➕";
     }
-
-
-
 }
 
