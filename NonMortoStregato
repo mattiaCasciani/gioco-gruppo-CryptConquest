@@ -64,11 +64,7 @@ public class NonMortoStregato extends Mostro implements CanUseMana {
      * @return
      */
     public String toString() {
-        String out = "";
-        out += mana != null ? "Mostro{"
-                + "mana='" + mana + '\''
-                + '}' + "\n" + super.toString() : out;
-        return out;
+        return "\uD83E\uDDDB";
     }
 
 }
