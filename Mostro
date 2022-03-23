@@ -86,10 +86,11 @@ public class Mostro extends Personaggio{
      * metodo che stampa le caratteristiche della classe
      */
     public String toString() {
-        String out = "";
-        out+= tipo != null ? "Mostro{" +
-                "tipo='" + tipo + '\'' +
-                '}'+ "\n"+super.toString(): out;
+        String out ="";
+        if (tipo.equals("non morto"))
+            out = "\uD83E\uDDDF";
+        else
+            out = "GC";
         return out;
     }
 }
