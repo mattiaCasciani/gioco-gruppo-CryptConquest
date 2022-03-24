@@ -1,4 +1,4 @@
-package Game;
+package com.company;
 
 public class NonMortoStregato extends Mostro implements CanUseMana {
 
