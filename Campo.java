@@ -91,7 +91,8 @@ public class Campo <T>{
     }
 
     public void add(T ogg, int x, int y) throws Exception{
-                field[y][x] = new Settore(true, ogg);
+        field[y][x] = null;
+        field[y][x] = new Settore(true, ogg);
     }
 
     private void load() throws Exception{
