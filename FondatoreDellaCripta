@@ -1,4 +1,4 @@
-package Game;
+package com.company;
 
 public class FondatoreDellaCripta extends Stregone implements CanUseMana{
 
