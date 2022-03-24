@@ -1,4 +1,4 @@
-package Game;
+package com.company;
 
 public class Mostro extends Personaggio{
     private String tipo;
