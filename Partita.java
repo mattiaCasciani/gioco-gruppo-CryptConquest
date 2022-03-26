@@ -1,4 +1,6 @@
-package com.company;
+package gioco;
+
+import gioco.Campo;
 
 public class Partita {
     private Campo crypt;
@@ -39,10 +41,8 @@ public class Partita {
         this.victory = victory;
     }
 
-    public void event(Character key) throws Exception {
-         if(key == null)
-            throw new Exception("errore, comando null");
-        else{
+    public void event(char key) throws Exception {
+
             Protagonista prot = (Protagonista) crypt.getCampo()[crypt.getyProt()][crypt.getxProt()].getInside();
              System.out.println("posizione attuale: " + crypt.getxProt() + crypt.getyProt() +"cella a destra: " + crypt.getCampo()[getCrypt().getyProt()][crypt.getxProt()+1].getInside());
             switch (key){
@@ -67,7 +67,7 @@ public class Partita {
                 default:
                     throw new Exception("errore, dato non valido");
             }
-        }
+        
     }
 
     private void spostamenti(Protagonista prot, int x, int y) throws Exception {
