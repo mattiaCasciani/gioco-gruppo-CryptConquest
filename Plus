@@ -1,7 +1,8 @@
-package Game;
+package gioco;
+
 
 public class Plus {
-    private Double value;
+    private double value;
     private int tipo;
 
     /**
@@ -14,9 +15,9 @@ public class Plus {
      * Costruttore con parametri della classe Plus
      * @param value
      * @param tipo
-     * @throws Exception
+     * @throws Exception                                                                                                 
      */
-    public Plus(Double value, int tipo) throws Exception {
+    public Plus(double value, int tipo) throws Exception {
         setValue(value);
         setTipo(tipo);
     }
@@ -25,7 +26,7 @@ public class Plus {
      * metodo che ritorna il valore dell'attributo value
      * @return
      */
-    public Double getValue() {
+    public double getValue() {
         return value;
     }
 
@@ -34,15 +35,13 @@ public class Plus {
      * @param value
      * @throws Exception
      */
-    public void setValue(Double value) throws Exception {
-        if (value != null) {
+    public void setValue(double value) throws Exception {  
             if (value > 0) {
                 this.value = value;
             } else {
                 throw new Exception("valore non valido");
             }
-        } else
-            throw new Exception("errore valore");
+  
     }
 
 
