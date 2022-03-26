@@ -1,9 +1,10 @@
-package Game;
+package gioco;
+
 
 public class Protagonista extends Personaggio {
     private String nome;
 
-    public Protagonista(Double difesa, Double attacco, Double vita, String nome) throws Exception {
+    public Protagonista(double difesa, double attacco, double vita, String nome) throws Exception {
         super(difesa, attacco, vita);
         setNome(nome);
     }
@@ -25,17 +26,17 @@ public class Protagonista extends Personaggio {
     }
 
     @Override
-    public void setAttacco(Double attacco) throws Exception {
+    public void setAttacco(double attacco) throws Exception {
         super.setAttacco(attacco);
     }
 
     @Override
-    public void setDifesa(Double difesa)throws Exception{
+    public void setDifesa(double difesa)throws Exception{
         super.setDifesa(difesa);
     }
 
     @Override
-    public void setVita(Double vita)throws Exception{
+    public void setVita(double vita)throws Exception{
         super.setVita(vita);
     }
 
