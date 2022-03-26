@@ -1,6 +1,7 @@
-package com.company;
+package gioco;
 import java.lang.Math;
 import java.util.Arrays;
+import java.lang.String;
 
 public class Campo <T>{
     private Settore[][] field;
@@ -9,8 +10,8 @@ public class Campo <T>{
     private int yExit;
     private int xProt;
     private int yProt;
-    private Integer xBoss;
-    private Integer yBoss;
+    private int xBoss;
+    private int yBoss;
 
     public Campo(Settore[][] field, boolean boss) throws Exception  {
         this.boss=boss;
@@ -49,11 +50,11 @@ public class Campo <T>{
         this.yProt = yProt;
     }
 
-    public void setxBoss(Integer xBoss) {
+    public void setxBoss(int xBoss) {
         this.xBoss = xBoss;
     }
 
-    public void setyBoss(Integer yBoss) {
+    public void setyBoss(int yBoss) {
         this.yBoss = yBoss;
     }
 
@@ -73,11 +74,11 @@ public class Campo <T>{
         return yProt;
     }
 
-    public Integer getxBoss() {
+    public int getxBoss() {
         return xBoss;
     }
 
-    public Integer getyBoss() {
+    public int getyBoss() {
         return yBoss;
     }
 
@@ -103,7 +104,7 @@ public class Campo <T>{
             }
         }
         Plus pl[] = {new Plus(15.0, 1), new Plus(20.0, 2), new Plus(10.0, 3)};
-        Protagonista prot= new Protagonista(30.0, 50.0, 30.0, "protagonista");
+        Protagonista prot= new Protagonista(30.00, 50.00, 30.00, "protagonista");
         xProt=0;
         yProt=0;
 
@@ -165,8 +166,6 @@ public class Campo <T>{
     public void cambiaPosBoss() throws Exception{
         int newXBoss;
         int newYBoss;
-        if(xBoss == null || yBoss == null)
-            throw new Exception("posizioni boss non valide");
         if(field[yBoss][xBoss].getInside()==null)
             throw new Exception("errore, fondatore della cripta non esiste");
         add((T)field[yBoss][xBoss].getInside(), xBoss-1, yBoss-1);
