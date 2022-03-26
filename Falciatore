@@ -1,8 +1,9 @@
-package com.company;
+package gioco;
+
 
 public class Falciatore extends Mostro {
 
-    private Integer nCelle;
+    private int nCelle;
 
     /**
      * costruttore con parametri
@@ -13,7 +14,7 @@ public class Falciatore extends Mostro {
      * @param tipo
      * @throws Exception
      */
-    public Falciatore(Integer nCelle, Double difesa, Double attacco, Double vita, String tipo) throws Exception {
+    public Falciatore(int nCelle, double difesa, double attacco, double vita, String tipo) throws Exception {
         super(difesa, attacco, vita, tipo);
         setnCelle(nCelle);
     }
@@ -30,7 +31,7 @@ public class Falciatore extends Mostro {
      * metodo get dell'attributo
      * @return
      */
-    public Integer getnCelle() {
+    public int getnCelle() {
         return nCelle;
     }
 
@@ -39,7 +40,7 @@ public class Falciatore extends Mostro {
      * @param nCelle
      * @throws Exception
      */
-    public void setnCelle(Integer nCelle) throws Exception{
+    public void setnCelle(int nCelle) throws Exception{
         try{
             if(nCelle >= 0)
                 this.nCelle = nCelle;
