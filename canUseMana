@@ -1,11 +1,10 @@
-package Game;
+package gioco;
 
 
     public interface CanUseMana {
-        public Integer getMana();
-        public void setMana(Integer mana) throws Exception;
+        public int getMana();
+        public void setMana(int mana) throws Exception;
 
     }
-
 
 
