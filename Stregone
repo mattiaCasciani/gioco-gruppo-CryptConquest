@@ -1,10 +1,8 @@
-package Game;
-
-import java.util.Random;
+package gioco;
 
 public class Stregone extends Mostro implements CanUseMana{
 
-    private Integer mana;
+    private  int mana;
 
     /**
      * Costruttore con parametri che chiama il costruttore della classe Mostro
@@ -15,7 +13,7 @@ public class Stregone extends Mostro implements CanUseMana{
      * @param tipo
      * @throws Exception
      */
-    public Stregone(Integer mana, Double difesa, Double attacco, Double vita, String tipo) throws Exception {
+    public Stregone(int mana, double difesa, double attacco, double vita, String tipo) throws Exception {
         super(difesa, attacco, vita, tipo);
         setMana(mana);
 
@@ -53,7 +51,7 @@ public class Stregone extends Mostro implements CanUseMana{
      * @throws Exception
      */
     @Override
-    public void setAttacco(Double attacco) throws Exception {
+    public void setAttacco(double attacco) throws Exception {
         super.setAttacco(attacco);
     }
 
@@ -63,7 +61,7 @@ public class Stregone extends Mostro implements CanUseMana{
      * @throws Exception
      */
     @Override
-    public void setDifesa(Double difesa) throws Exception {
+    public void setDifesa(double difesa) throws Exception {
         super.setDifesa(difesa);
     }
 
@@ -73,7 +71,7 @@ public class Stregone extends Mostro implements CanUseMana{
      * @throws Exception
      */
     @Override
-    public void setVita(Double vita) throws Exception {
+    public void setVita(double vita) throws Exception {
         super.setVita(vita);
     }
 
@@ -83,7 +81,7 @@ public class Stregone extends Mostro implements CanUseMana{
      * @return
      */
     @Override
-    public Double getDifesa() {
+    public double getDifesa() {
         return super.getDifesa();
     }
 
@@ -92,7 +90,7 @@ public class Stregone extends Mostro implements CanUseMana{
      * @return
      */
     @Override
-    public Double getAttacco() {
+    public double getAttacco() {
         return super.getAttacco();
     }
 
@@ -101,7 +99,7 @@ public class Stregone extends Mostro implements CanUseMana{
      * @return
      */
     @Override
-    public Double getVita() {
+    public double getVita() {
         return super.getVita();
     }
 
@@ -110,7 +108,7 @@ public class Stregone extends Mostro implements CanUseMana{
      * @return
      */
     @Override
-    public Integer getMana() {
+    public int getMana() {
         return mana;
     }
 
@@ -120,7 +118,7 @@ public class Stregone extends Mostro implements CanUseMana{
      * @throws Exception
      */
     @Override
-    public void setMana(Integer mana)throws Exception {
+    public void setMana(int mana)throws Exception {
         try{
             if(mana >= 0)
                 this.mana= mana;
@@ -137,7 +135,7 @@ public class Stregone extends Mostro implements CanUseMana{
      * @throws Exception
      */
     public void incrementa() throws Exception {
-        Integer m = getMana();
+       int m = getMana();
         if(m != 0){
 
             Double rand =  (Math.random() * m);
@@ -184,3 +182,4 @@ public class Stregone extends Mostro implements CanUseMana{
         return "\uD83E\uDDD9\u200D";
     }
 }
+
