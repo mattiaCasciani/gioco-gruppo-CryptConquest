@@ -1,8 +1,9 @@
-package com.company;
+package gioco;
+
 
 public class NonMortoStregato extends Mostro implements CanUseMana {
 
-    private Integer mana;
+    private int mana;
 
     /**
      * Costruttore della classe NonMortoStregato che chiama il costruttore della classe Mostro
@@ -13,7 +14,7 @@ public class NonMortoStregato extends Mostro implements CanUseMana {
      * @param tipo
      * @throws Exception
      */
-    public NonMortoStregato(Integer mana, Double difesa, Double attacco, Double vita, String tipo) throws Exception {
+    public NonMortoStregato(int mana, double difesa, double attacco, double vita, String tipo) throws Exception {
         super(difesa, attacco, vita, tipo);
         setMana(mana);
     }
@@ -30,7 +31,7 @@ public class NonMortoStregato extends Mostro implements CanUseMana {
      * @return
      */
     @Override
-    public Integer getMana() {
+    public int getMana() {
         return mana;
     }
 
@@ -40,7 +41,7 @@ public class NonMortoStregato extends Mostro implements CanUseMana {
      */
 
     @Override
-    public void setMana(Integer mana) throws Exception {
+    public void setMana(int mana) throws Exception {
         try{
             if(mana >= 0)
                 this.mana= mana;
@@ -55,7 +56,6 @@ public class NonMortoStregato extends Mostro implements CanUseMana {
 
 
     public boolean rivivi(){
-
         return false;
     }
 
@@ -68,3 +68,4 @@ public class NonMortoStregato extends Mostro implements CanUseMana {
     }
 
 }
+
