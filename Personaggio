@@ -1,11 +1,10 @@
-
-package Game;
+package gioco;
 
 
 public abstract class Personaggio {
-    private Double difesa;
-    private Double attacco;
-    private Double vita;
+    private double difesa;
+    private double attacco;
+    private double vita;
 
     /**
      * Costruttore senza parametri
@@ -20,7 +19,7 @@ public abstract class Personaggio {
      * @param vita
      * @throws Exception
      */
-    public Personaggio(Double difesa, Double attacco, Double vita) throws Exception {
+    public Personaggio(double difesa, double attacco, double vita) throws Exception {
         setDifesa(difesa);
         setAttacco(attacco);
         setVita(vita);
@@ -30,7 +29,7 @@ public abstract class Personaggio {
      * metodo get dell'attribto difesa
      * @return
      */
-    public Double getDifesa() {
+    public double getDifesa() {
         return difesa;
     }
 
@@ -39,22 +38,21 @@ public abstract class Personaggio {
      * @param difesa
      * @throws Exception
      */
-    public void setDifesa(Double difesa) throws Exception {
-        if (difesa != null) {
+    public void setDifesa(double difesa) throws Exception {
+       
             if (difesa >= 0) {
                 this.difesa = difesa;
             } else {
                 throw new Exception("valore difesa non valido");
             }
-        } else
-            throw new Exception("errore valore difesa");
+        
     }
 
     /**
      * metodo che restituisce il valore dell'attributo attacco
      * @return
      */
-    public Double getAttacco() {
+    public double getAttacco() {
         return attacco;
     }
 
@@ -63,22 +61,21 @@ public abstract class Personaggio {
      * @param attacco
      * @throws Exception
      */
-    public void setAttacco(Double attacco) throws Exception {
-        if (attacco != null) {
+    public void setAttacco(double attacco) throws Exception {
+      
             if (attacco > 0) {
                 this.attacco = attacco;
             } else {
                 throw new Exception("valore attacco non valido");
             }
-        } else
-            throw new Exception("errore valore attacco");
+       
     }
 
     /**
      * metodo che ritorna il valore dell'attributo vita
      * @return
      */
-    public Double getVita() {
+    public double getVita() {
         return vita;
     }
 
@@ -87,15 +84,14 @@ public abstract class Personaggio {
      * @param vita
      * @throws Exception
      */
-    public void setVita(Double vita) throws Exception {
-        if (vita != null) {
+    public void setVita(double vita) throws Exception {
+    
             if (vita >= 0) {
                 this.vita = vita;
             } else {
                 throw new Exception("valore vita non valido");
             }
-        } else
-            throw new Exception("errore valore vita");
+      
     }
 
     /**
@@ -108,3 +104,5 @@ public abstract class Personaggio {
 
 
 }
+
+
