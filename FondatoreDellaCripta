@@ -1,8 +1,9 @@
-package com.company;
+package gioco;
+
 
 public class FondatoreDellaCripta extends Stregone implements CanUseMana{
 
-    private Integer nMosse;
+    private int nMosse;
 
     /**
      * Costruttore della classe FondatoredellaCripta che chiama il costruttore della classe Stregone
@@ -14,7 +15,7 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      * @param nMosse
      * @throws Exception
      */
-    public FondatoreDellaCripta(Integer mana, Double difesa, Double attacco, Double vita, String tipo, Integer nMosse) throws Exception {
+    public FondatoreDellaCripta(int mana, double difesa, double attacco, double vita, String tipo, int nMosse) throws Exception {
         super(mana, difesa, attacco, vita, tipo);
         setnMosse(nMosse);
     }
@@ -30,7 +31,7 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      * metodo che ritorna il numero di mosse del Fondatore
      * @return
      */
-    public Integer getnMosse() {
+    public int getnMosse() {
         return nMosse;
     }
 
@@ -39,7 +40,7 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      * @param nMosse
      * @throws Exception
      */
-    public void setnMosse(Integer nMosse)throws Exception {
+    public void setnMosse(int nMosse)throws Exception {
         try{
             if(nMosse >= 0)
                 this.nMosse = nMosse;
@@ -76,7 +77,7 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      * @throws Exception
      */
     @Override
-    public void setAttacco(Double attacco) throws Exception {
+    public void setAttacco(double attacco) throws Exception {
         super.setAttacco(attacco);
     }
 
@@ -86,7 +87,7 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      * @throws Exception
      */
     @Override
-    public void setDifesa(Double difesa) throws Exception {
+    public void setDifesa(double difesa) throws Exception {
         super.setDifesa(difesa);
     }
 
@@ -95,7 +96,7 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      * @return
      */
     @Override
-    public Double getDifesa() {
+    public double getDifesa() {
         return super.getDifesa();
     }
 
@@ -105,7 +106,7 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      * @throws Exception
      */
     @Override
-    public void setVita(Double vita) throws Exception {
+    public void setVita(double vita) throws Exception {
         super.setVita(vita);
     }
 
@@ -114,7 +115,7 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      * @return
      */
     @Override
-    public Double getAttacco() {
+    public double getAttacco() {
         return super.getAttacco();
     }
 
@@ -123,7 +124,7 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      * @return
      */
     @Override
-    public Double getVita() {
+    public double getVita() {
         return super.getVita();
     }
 
@@ -132,7 +133,7 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      * @return
      */
     @Override
-    public Integer getMana() {
+    public int getMana() {
         return super.getMana();
     }
 
@@ -142,7 +143,7 @@ public class FondatoreDellaCripta extends Stregone implements CanUseMana{
      * @throws Exception
      */
     @Override
-    public void setMana(Integer mana) throws Exception {
+    public void setMana(int mana) throws Exception {
         super.setMana(mana);
     }
 
