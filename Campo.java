@@ -96,6 +96,8 @@ public class Campo <T>{
 
     public int getXprot(){return xprot;}
     public int getYprot(){return yprot;}
+    public void setField(T[][] field) {this.field = field;}
+    public void setIsBoss(boolean boss) {isBoss = boss;}
 
     public T[][] getCampo(){return field;}
     @Override
