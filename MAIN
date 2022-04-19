@@ -7,17 +7,23 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         Partita p = new Partita();
         System.out.println(p.toString());
-        p.move(0,1);
-        System.out.println(p.toString());
-        p.move(0,2);
-        System.out.println(p.toString());
-        p.move(1,2);
-        System.out.println(p.toString());
-        /*while (true){
+        while (true){
             char key=scan.nextLine().charAt(0);
-            //p.event(key);
-            System.out.println(p.toString());
-        }*/
+            p.event(key);
+            if (p.isFinished()==false)
+                System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" + p.toString());
+            else {
+                if (p.isVictory())
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nwow hai vinto!");
+                else
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoo hai perso!");
+            }
+            /*if (p.isBoss() && (p.getCrypt().getYexit() == p.getCrypt().getYprot() && p.getCrypt().getXexit() == p.getCrypt().getXprot())){
+                p.setCrypt(new Campo<>(p.getProt(), new FondatoreDellaCripta(100,200.0,250.0,300.0,"fondatore della cripta", 8), 7, 7));
+            }*/
+        }
+        /*Campo crypt = new Campo<>(new Protagonista(50.00, 50.00, 50.00, "protagonista"), new FondatoreDellaCripta(100,200.0,250.0,300.0,"fondatore della cripta", 8), 7, 7);
+        System.out.println(crypt.toString());
 
         /*Campo c = new Campo();
         System.out.println(c.toString());
