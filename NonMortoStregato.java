@@ -55,10 +55,6 @@ public class NonMortoStregato extends Mostro implements CanUseMana {
 
 
 
-    public boolean rivivi(){
-        return false;
-    }
-
     /**
      * metodo che stampa le caratteristiche della classe
      * @return
