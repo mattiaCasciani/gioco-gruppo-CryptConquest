@@ -1,5 +1,3 @@
-package com.company;
-
 public class Partita {
     private Campo crypt;
     private boolean isFinished;
@@ -144,6 +142,7 @@ public class Partita {
             System.out.println("wow hai trovato l'uscita!");
             isFinished=true;
             victory=true;
+            crypt.setIsBoss(true);
         }
     }
 
@@ -164,6 +163,16 @@ public class Partita {
     public boolean isFinished() {
         return isFinished;
     }
+
+    private void nuovoCampo(FondatoreDellaCripta f, Object[][]nuovoCampo, Protagonista p, Plus pl){
+        if(isVictory()){
+            crypt.loadBoss(f, nuovoCampo, p, pl);
+            victory = false;
+            isFinished = false;
+        }
+    }
+
+
 
     /**
      * metodo che ritorna true se si ha vinto la partita
