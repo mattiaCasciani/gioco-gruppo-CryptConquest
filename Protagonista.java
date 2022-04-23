@@ -41,8 +41,8 @@ public class Protagonista extends Personaggio {
     }
 
    public boolean attacca(Mostro monster) throws Exception{
-        Double nuovaVitaMostro=((monster.getVita()+ monster.getDifesa())/2)-getAttacco();
-        Double nuovaVitaProtagonista=((getVita()+getDifesa())/2)- monster.getAttacco();
+        Double nuovaVitaMostro=((monster.getVita()+ (monster.getDifesa())/2))-getAttacco();
+        Double nuovaVitaProtagonista=((getVita()+(getDifesa())/2))- monster.getAttacco();
         while (nuovaVitaProtagonista > 0 || nuovaVitaMostro > 0) {
             if (nuovaVitaMostro <= 0){ //controlla se il mostro riesce a sopravvivere all'attacco del protagonista
                 Double nuovaDifesa = getDifesa() - (monster.getAttacco()*2);
@@ -53,8 +53,8 @@ public class Protagonista extends Personaggio {
                     setDifesa(nuovaDifesa);
                 return true;
             }
-            nuovaVitaProtagonista -= getAttacco();
-            nuovaVitaMostro -= monster.getAttacco();
+            nuovaVitaMostro -= getAttacco();
+            nuovaVitaProtagonista -= monster.getAttacco();
         }
         return false; // non serve fare un controllo se l'attacco del mostro è maggiore dell'attacco e difesa del protagonista perché nuovaVitaProtagonista alla fine del ciclo sarebbe minore di zero in caso di sconfitta, portando ad uscire dal ciclo e ritornando false, quindi una sconfitta.
     }
